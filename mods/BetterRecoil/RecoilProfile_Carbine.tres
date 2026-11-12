@@ -1,10 +1,18 @@
-[gd_resource type="Resource" script_class="RecoilProfile" format=3 uid="uid://wtsep1tusaai"]
+[gd_resource type="Resource" script_class="RecoilProfile" format=3]
 
-[ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
+[ext_resource type="Script" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
+
+[sub_resource type="Curve" id="Curve_follow_through"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.013541667, 0.24923068), 15.57926, 15.57926, 0, 0, Vector2(0.04375, 0.64201313), 6.6998796, 6.6998796, 0, 0, Vector2(0.13333333, 1), 0.0, 0.0, 0, 0, Vector2(0.45520833, 0.30780736), -1.4663099, -1.4663099, 0, 0, Vector2(0.5989583, 0.13866632), -0.5847072, -0.5847072, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
 
 [sub_resource type="Curve" id="Curve_kickback"]
 _limits = [-0.13928, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0087558655, 0.3559938), 38.705917, 38.705917, 0, 0, Vector2(0.026267596, 0.9954301), 0.0, 0.0, 0, 0, Vector2(0.065668985, 0.548681), -8.293877, -8.293877, 0, 0, Vector2(0.17949523, -0.13928), 0.0, 0.0, 0, 0, Vector2(0.4596829, 0.0388601), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_lift"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.014228281, 0.24923068), 14.827452, 14.827452, 0, 0, Vector2(0.04596829, 0.64201313), 9.017081, 9.017081, 0, 0, Vector2(0.07661382, 0.85990864), 3.5878286, 3.5878286, 0, 0, Vector2(0.14009383, 1), 0.0, 0.0, 0, 0, Vector2(0.46406084, 0.3304094), -0.99386376, -0.99386376, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 7
 
 [sub_resource type="Curve" id="Curve_pitch"]
@@ -36,5 +44,12 @@ pitch_curve = SubResource("Curve_pitch")
 kickback_curve = SubResource("Curve_kickback")
 roll_curve = SubResource("Curve_roll")
 yaw_curve = SubResource("Curve_yaw")
+lift_range_metres = Vector2(0.0007094356, 0.0007094356)
+lift_curve = SubResource("Curve_lift")
+follow_through_pitch_range_degrees = Vector2(-0.24843165, -0.16562112)
+follow_through_yaw_range_degrees = Vector2(-0.49686334, 0.45545805)
+follow_through_duration_seconds = 1.0
+follow_through_curve = SubResource("Curve_follow_through")
+follow_through_pivot_metres = Vector3(0, -0.1, -0.4)
 ads_rotation_multiplier = 0.7
 ads_translation_multiplier = 0.8

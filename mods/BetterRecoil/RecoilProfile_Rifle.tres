@@ -2,10 +2,18 @@
 
 [ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
 
+[sub_resource type="Curve" id="Curve_follow_through"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.010714283, 0.24338914), 19.213802, 19.213802, 0, 0, Vector2(0.035714276, 0.6431346), 8.12242, 8.12242, 0, 0, Vector2(0.1098214, 1), 0.0, 0.0, 0, 0, Vector2(0.23124993, 0.7035987), -2.4381878, -2.4381878, 0, 0, Vector2(0.41964275, 0.24486196), -0.8170627, -0.8170627, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
 [sub_resource type="Curve" id="Curve_kickback"]
 _limits = [-0.1157428, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.021428565, 0.9995795), 0.0, 0.0, 0, 0, Vector2(0.07499998, 0.3663483), -6.129294, -6.129294, 0, 0, Vector2(0.20357136, -0.1157428), 0.0, 0.0, 0, 0, Vector2(0.36071417, 0.0545116), 0.0, 0.0, 0, 0, Vector2(0.6357141, -0.0146373), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 7
+
+[sub_resource type="Curve" id="Curve_lift"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_pitch"]
 _limits = [-0.5424019, 1.0, 0.0, 1.0]
@@ -35,5 +43,12 @@ pitch_curve = SubResource("Curve_pitch")
 kickback_curve = SubResource("Curve_kickback")
 roll_curve = SubResource("Curve_roll")
 yaw_curve = SubResource("Curve_yaw")
+lift_range_metres = Vector2(0.005, 0.005)
+lift_curve = SubResource("Curve_lift")
+follow_through_pitch_range_degrees = Vector2(-0.3363717, -0.28030974)
+follow_through_yaw_range_degrees = Vector2(-0.1121239, 0.19621682)
+follow_through_duration_seconds = 1.166667
+follow_through_curve = SubResource("Curve_follow_through")
+follow_through_pivot_metres = Vector3(0, 0, -0.2)
 ads_rotation_multiplier = 0.66666667
 ads_translation_multiplier = 1.1

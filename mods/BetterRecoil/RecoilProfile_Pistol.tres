@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
 
+[sub_resource type="Curve" id="Curve_follow_through"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.008285984, 0.26751205), 26.95476, 26.95476, 0, 0, Vector2(0.025686553, 0.6553339), 11.200808, 11.200808, 0, 0, Vector2(0.07788826, 1), 0.0, 0.0, 0, 0, Vector2(0.18892045, 0.6173791), -2.9907963, -2.9907963, 0, 0, Vector2(0.35878313, 0.1763605), -0.58974653, -0.58974653, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
 [sub_resource type="Curve" id="Curve_kickback"]
 _limits = [-0.3034577, 1.0000001, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.049999975, 1.0000001), 0.0, 0.0, 0, 0, Vector2(0.08124996, 0.9529829), -2.6484275, -2.6484275, 0, 0, Vector2(0.12499994, 0.1819545), -11.753706, -11.753706, 0, 0, Vector2(0.18124992, -0.3034577), 0.0, 0.0, 0, 0, Vector2(0.36249983, 0.2626232), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_lift"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.068749964, 0.64313155), 4.241803, 4.241803, 0, 0, Vector2(0.2109374, 1), 0.0, 0.0, 0, 0, Vector2(0.6015622, 0.46312967), -1.082563, -1.082563, 0, 0, Vector2(0.94062454, 0.1579002), -0.58858126, -0.58858126, 0, 0, Vector2(0.998437, 0.12986834), -1.4015888, -1.4015888, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 7
 
 [sub_resource type="Curve" id="Curve_pitch"]
@@ -25,7 +33,6 @@ point_count = 7
 [resource]
 script = ExtResource("1_profile")
 profile_name = "Pistol"
-playback_speed = 1.2
 rotation_pivot_metres = Vector3(0, -0.02, -0.01)
 yaw_range_degrees = Vector2(-1.8, 2)
 roll_range_degrees = Vector2(-3, 3)
@@ -34,6 +41,13 @@ pitch_curve = SubResource("Curve_pitch")
 kickback_curve = SubResource("Curve_kickback")
 roll_curve = SubResource("Curve_roll")
 yaw_curve = SubResource("Curve_yaw")
+lift_range_metres = Vector2(0.005592977, 0.005592977)
+lift_curve = SubResource("Curve_lift")
+follow_through_pitch_range_degrees = Vector2(-1.6173948, -1.2939157)
+follow_through_yaw_range_degrees = Vector2(-0.8086974, 0.7547842)
+follow_through_duration_seconds = 1.2571429
+follow_through_curve = SubResource("Curve_follow_through")
+follow_through_pivot_metres = Vector3(0, 0, -0.25)
 ads_rotation_multiplier = 1.0
 ads_translation_multiplier = 1.0
 metadata/_custom_type_script = "uid://e6x800ompmv6"

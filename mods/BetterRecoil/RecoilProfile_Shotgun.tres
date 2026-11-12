@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
 
+[sub_resource type="Curve" id="Curve_follow_through"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0075231483, 0.2590013), 28.857052, 28.857052, 0, 0, Vector2(0.023726853, 0.6464843), 12.061551, 12.061551, 0, 0, Vector2(0.07349537, 1), 0.0, 0.0, 0, 0, Vector2(0.18287037, 0.60906994), -3.0442524, -3.0442524, 0, 0, Vector2(0.35069445, 0.17266282), -0.5743798, -0.5743798, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
 [sub_resource type="Curve" id="Curve_kickback"]
 _limits = [0.0, 1.000052, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.010424557, 0.7779189), 52.654488, 52.654488, 0, 0, Vector2(0.015636835, 1.000052), 0.0, 0.0, 0, 0, Vector2(0.06515348, 0.5445806), -10.350193, -10.350193, 0, 0, Vector2(0.088608734, 0.2752652), -4.622839, -4.622839, 0, 0, Vector2(0.17721745, 0.0579111), -0.18332131, -0.18332131, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_lift"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.011727626, 0.25495622), 18.365902, 18.365902, 0, 0, Vector2(0.037137482, 0.6442904), 7.8939066, 7.8939066, 0, 0, Vector2(0.11271552, 1), 0.0, 0.0, 0, 0, Vector2(0.23520406, 0.7047669), -2.433956, -2.433956, 0, 0, Vector2(0.4248007, 0.23800667), -0.8048176, -0.8048176, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 7
 
 [sub_resource type="Curve" id="Curve_pitch"]
@@ -36,5 +44,12 @@ pitch_curve = SubResource("Curve_pitch")
 kickback_curve = SubResource("Curve_kickback")
 roll_curve = SubResource("Curve_roll")
 yaw_curve = SubResource("Curve_yaw")
+lift_range_metres = Vector2(0.0068934294, 0.0068934294)
+lift_curve = SubResource("Curve_lift")
+follow_through_pitch_range_degrees = Vector2(-1.6693478, -1.1128986)
+follow_through_yaw_range_degrees = Vector2(-0.16693477, 0.2225797)
+follow_through_duration_seconds = 1.8
+follow_through_curve = SubResource("Curve_follow_through")
+follow_through_pivot_metres = Vector3(0, 0, -0.18)
 ads_rotation_multiplier = 0.63333333
 ads_translation_multiplier = 1.0
