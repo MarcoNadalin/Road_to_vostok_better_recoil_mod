@@ -1,0 +1,15 @@
+[mod]
+name="Better Recoil"
+id="better-recoil"
+version="0.1.0"
+author="Marco"
+priority=80
+
+[dependencies]
+required=["inverse-kinematics-rig"]
+
+[autoload]
+BetterRecoil="res://mods/BetterRecoil/Main.gd"
+
+[hooks]
+"res://Scripts/Recoil.gd"="ApplyRecoil"

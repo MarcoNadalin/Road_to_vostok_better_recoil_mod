@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="RecoilProfile" format=3 uid="uid://c764ctnxyv4e"]
+
+[ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
+
+[sub_resource type="Curve" id="Curve_kickback"]
+_limits = [-0.3034577, 1.0000001, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.049999975, 1.0000001), 0.0, 0.0, 0, 0, Vector2(0.08124996, 0.9529829), -2.6484275, -2.6484275, 0, 0, Vector2(0.12499994, 0.1819545), -11.753706, -11.753706, 0, 0, Vector2(0.18124992, -0.3034577), 0.0, 0.0, 0, 0, Vector2(0.36249983, 0.2626232), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_pitch"]
+_limits = [-0.3843346, 1.0098768, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.031249983, 0.5779653), 22.91907, 22.91907, 0, 0, Vector2(0.043749977, 0.927089), 8.0136385, 8.0136385, 0, 0, Vector2(0.06249997, 1.0098768), 0.0, 0.0, 0, 0, Vector2(0.17499991, -0.3843346), 0.0, 0.0, 0, 0, Vector2(0.36874983, 0.2592035), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_roll"]
+_limits = [-0.1147747, 1.008786, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.012499994, 0.61664), 30.189243, 30.189243, 0, 0, Vector2(0.031249983, 1.008786), 0.0, 0.0, 0, 0, Vector2(0.13124993, 0.6744239), -4.167751, -4.167751, 0, 0, Vector2(0.26874986, -0.1147747), 0.0, 0.0, 0, 0, Vector2(0.43124977, 0.035511), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_yaw"]
+_limits = [-0.4573197, 1.0015994, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.056249972, 0.4574875), 9.80618, 9.80618, 0, 0, Vector2(0.087499954, 0.8266668), 6.1434164, 6.1434164, 0, 0, Vector2(0.13124993, 1.0015994), 0.0, 0.0, 0, 0, Vector2(0.48749977, -0.4573197), 0.0, 0.0, 0, 0, Vector2(0.65624964, 0.0712184), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[resource]
+script = ExtResource("1_profile")
+profile_name = "Pistol"
+playback_speed = 1.2
+rotation_pivot_metres = Vector3(0, -0.02, -0.01)
+yaw_range_degrees = Vector2(-1.8, 2)
+roll_range_degrees = Vector2(-3, 3)
+shot_duration_seconds = 0.666667
+pitch_curve = SubResource("Curve_pitch")
+kickback_curve = SubResource("Curve_kickback")
+roll_curve = SubResource("Curve_roll")
+yaw_curve = SubResource("Curve_yaw")
+ads_rotation_multiplier = 1.0
+ads_translation_multiplier = 1.0
+metadata/_custom_type_script = "uid://e6x800ompmv6"

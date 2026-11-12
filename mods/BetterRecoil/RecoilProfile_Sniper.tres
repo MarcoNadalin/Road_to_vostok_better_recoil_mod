@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="RecoilProfile" format=3 uid="uid://djwyijbg3ycoy"]
+
+[ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
+
+[sub_resource type="Curve" id="Curve_kickback"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0064102565, 0.2294343), 29.847866, 29.847866, 0, 0, Vector2(0.025641026, 0.6951538), 11.465386, 11.465386, 0, 0, Vector2(0.070512824, 0.9998306), 0.0, 0.0, 0, 0, Vector2(0.17307691, 0.5578254), -3.501559, -3.501559, 0, 0, Vector2(0.32692307, 0.1141842), -0.39368096, -0.39368096, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_pitch"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.012820513, 0.306564), 20.059135, 20.059135, 0, 0, Vector2(0.03205128, 0.6323288), 8.8626585, 8.8626585, 0, 0, Vector2(0.1025641, 0.9996768), 0.0, 0.0, 0, 0, Vector2(0.21794872, 0.6700536), -2.7137182, -2.7137182, 0, 0, Vector2(0.40384614, 0.1934768), -0.66650146, -0.66650146, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_roll"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.012820513, 0.306564), 20.059135, 20.059135, 0, 0, Vector2(0.03205128, 0.6323288), 8.8626585, 8.8626585, 0, 0, Vector2(0.1025641, 0.9996768), 0.0, 0.0, 0, 0, Vector2(0.21794872, 0.6700536), -2.7137182, -2.7137182, 0, 0, Vector2(0.40384614, 0.1934768), -0.66650146, -0.66650146, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_yaw"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.012820513, 0.306564), 20.059135, 20.059135, 0, 0, Vector2(0.03205128, 0.6323288), 8.8626585, 8.8626585, 0, 0, Vector2(0.1025641, 0.9996768), 0.0, 0.0, 0, 0, Vector2(0.21794872, 0.6700536), -2.7137182, -2.7137182, 0, 0, Vector2(0.40384614, 0.1934768), -0.66650146, -0.66650146, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[resource]
+script = ExtResource("1_profile")
+profile_name = "Sniper"
+playback_speed = 1.2
+pitch_range_degrees = Vector2(-4.05, -3.15)
+kickback_range_metres = Vector2(-0.04125, -0.0375)
+rotation_pivot_metres = Vector3(0, -0.02, 0.03)
+yaw_range_degrees = Vector2(-0.7875, 0.675)
+roll_range_degrees = Vector2(-0.81, 1.0125)
+shot_duration_seconds = 0.65
+pitch_curve = SubResource("Curve_pitch")
+kickback_curve = SubResource("Curve_kickback")
+roll_curve = SubResource("Curve_roll")
+yaw_curve = SubResource("Curve_yaw")
+ads_rotation_multiplier = 0.7
+ads_translation_multiplier = 0.8

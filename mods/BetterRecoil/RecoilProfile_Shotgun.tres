@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="RecoilProfile" format=3 uid="uid://cx3ng8ca17a8b"]
+
+[ext_resource type="Script" uid="uid://e6x800ompmv6" path="res://mods/BetterRecoil/RecoilProfile.gd" id="1_profile"]
+
+[sub_resource type="Curve" id="Curve_kickback"]
+_limits = [0.0, 1.000052, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.010424557, 0.7779189), 52.654488, 52.654488, 0, 0, Vector2(0.015636835, 1.000052), 0.0, 0.0, 0, 0, Vector2(0.06515348, 0.5445806), -10.350193, -10.350193, 0, 0, Vector2(0.088608734, 0.2752652), -4.622839, -4.622839, 0, 0, Vector2(0.17721745, 0.0579111), -0.18332131, -0.18332131, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_pitch"]
+_limits = [-0.1882191, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.06775962, 0.9999598), 0.0, 0.0, 0, 0, Vector2(0.17721745, 0.8184169), -2.9653232, -2.9653232, 0, 0, Vector2(0.24237093, 0.2416899), -6.472159, -6.472159, 0, 0, Vector2(0.32837355, -0.1882191), 0.0, 0.0, 0, 0, Vector2(0.5081971, 0.0999211), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_roll"]
+_limits = [-0.522289, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.020849114, 1), 0.0, 0.0, 0, 0, Vector2(0.10424557, -0.522289), 0.0, 0.0, 0, 0, Vector2(0.1798236, 0.3181283), 0.0, 0.0, 0, 0, Vector2(0.2866753, -0.2629484), 0.0, 0.0, 0, 0, Vector2(0.3726779, 0.1550584), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="Curve" id="Curve_yaw"]
+_limits = [-0.3021779, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.039092086, 0.9987679), 0.0, 0.0, 0, 0, Vector2(0.16158064, 0.4846162), -6.4975367, -6.4975367, 0, 0, Vector2(0.20849115, -0.0285711), -7.1384172, -7.1384172, 0, 0, Vector2(0.26061392, -0.3021779), 0.0, 0.0, 0, 0, Vector2(0.43001297, 0.1695534), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[resource]
+script = ExtResource("1_profile")
+profile_name = "Shotgun"
+playback_speed = 1.35
+pitch_range_degrees = Vector2(-3, -2)
+kickback_range_metres = Vector2(-0.03, -0.02)
+rotation_pivot_metres = Vector3(0, 0, -0.05)
+yaw_range_degrees = Vector2(-1, 1)
+roll_range_degrees = Vector2(-5, 6)
+shot_duration_seconds = 1.598789
+pitch_curve = SubResource("Curve_pitch")
+kickback_curve = SubResource("Curve_kickback")
+roll_curve = SubResource("Curve_roll")
+yaw_curve = SubResource("Curve_yaw")
+ads_rotation_multiplier = 0.63333333
+ads_translation_multiplier = 1.0
