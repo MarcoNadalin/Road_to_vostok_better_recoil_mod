@@ -13,7 +13,7 @@ point_count = 7
 
 [sub_resource type="Curve" id="Curve_lift"]
 _limits = [-0.04090033, 1.161183, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.01751173, 0.24578004), 11.905654, 11.905654, 0, 0, Vector2(0.056913123, 0.6378881), 5.1379714, 5.1379714, 0, 0, Vector2(0.13128492, 1.161183), 0.0, 0.0, 0, 0, Vector2(0.3519553, 0.38761553), -1.1838202, -1.1838202, 0, 0, Vector2(0.7290503, 0.13481094), -1.0629573, -1.0629573, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.01751173, 0.24578004), 11.905654, 11.905654, 0, 0, Vector2(0.056913123, 0.6378881), 5.1379714, 5.1379714, 0, 0, Vector2(0.13128492, 0.8197871), 0.0, 0.0, 0, 0, Vector2(0.3519553, 0.38761553), -1.1838202, -1.1838202, 0, 0, Vector2(0.7290503, 0.13481094), -1.0629573, -1.0629573, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 7
 
 [sub_resource type="Curve" id="Curve_pitch"]
@@ -36,7 +36,7 @@ script = ExtResource("1_profile")
 profile_name = "SMG"
 playback_speed = 1.25
 pitch_range_degrees = Vector2(-0.585, -0.455)
-kickback_range_metres = Vector2(-0.01, -0.007)
+kickback_range_metres = Vector2(-0.005, -0.004)
 rotation_pivot_metres = Vector3(0, -0.02, 0.03)
 yaw_range_degrees = Vector2(-0.455, 0.39)
 roll_range_degrees = Vector2(-1, 1.4)
@@ -45,12 +45,12 @@ pitch_curve = SubResource("Curve_pitch")
 kickback_curve = SubResource("Curve_kickback")
 roll_curve = SubResource("Curve_roll")
 yaw_curve = SubResource("Curve_yaw")
-lift_range_metres = Vector2(0.002, 0.003)
+lift_range_metres = Vector2(0, 0.001)
 lift_curve = SubResource("Curve_lift")
 follow_through_pitch_range_degrees = Vector2(-0.20685378, -0.13790251)
 follow_through_yaw_range_degrees = Vector2(-0.41370755, 0.37923193)
 follow_through_duration_seconds = 1.25
 follow_through_curve = SubResource("Curve_follow_through")
 follow_through_pivot_metres = Vector3(0, -0.1, -0.4)
-ads_rotation_multiplier = 0.7
-ads_translation_multiplier = 0.8
+ads_rotation_multiplier = 0.47
+ads_translation_multiplier = 0.32
